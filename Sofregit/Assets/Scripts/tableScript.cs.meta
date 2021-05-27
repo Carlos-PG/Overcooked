@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 55e957a40ab4d804f8e237d9ba1c13e7
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - ingredientType: {fileID: 6553946603680632734, guid: 9d074cd99f9323f4d87b1ebc40cae484,
+      type: 3}
+  - processedFoodType: {fileID: 1456579129408104299, guid: fc784c8fd5caa904eb3c1f5ade85e7c1,
+      type: 3}
+  - item: {instanceID: 0}
+  - board: {fileID: 8423771934071016313, guid: 2badc4f516039dc43bf212233b83416f, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
