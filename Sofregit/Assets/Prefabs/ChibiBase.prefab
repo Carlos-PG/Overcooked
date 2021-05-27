@@ -783,6 +783,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 387a93ceaec3f794e9aa52f8b3b4bda9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerSpeed: 10
   itemObj: {fileID: 5019602097354428574, guid: f568517029f7a0549a25174eea77e8dd, type: 3}
   knifeMod: {fileID: 4133825918275565343, guid: 66331d8693551a740a186febd479a281,
     type: 3}

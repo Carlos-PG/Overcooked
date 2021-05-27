@@ -6,7 +6,7 @@ public class moveCharacter : MonoBehaviour
 {
     private Animator animator;
     private CharacterController controller;
-    private float playerSpeed = 2.0f;
+    public float playerSpeed = 10.0f;
     private bool hasItem = false;
     private GameObject item;
     public GameObject itemObj;
