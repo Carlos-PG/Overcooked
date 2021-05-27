@@ -12,12 +12,12 @@ public class crateScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        sample = Instantiate(ingredientType, transform.position + new Vector3(0f, 2f, 0f), ingredientType.transform.rotation);
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        sample.transform.Rotate(new Vector3(0f, 0.1f, 0f));
+        
     }
 }

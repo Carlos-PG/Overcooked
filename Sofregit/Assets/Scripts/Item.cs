@@ -368,4 +368,10 @@ public class Item : MonoBehaviour
         }
         return false;
     }
+
+    public bool isProcessable()
+    {
+        if (food.tag == "Apple" || food.tag == "Strawberry" || food.tag == "Carrot" || food.tag == "Potato" || food.tag == "Cucumber" || food.tag == "Mushroom" || food.tag == "Egg" || food.tag == "Onion" || food.tag == "Fish") return true;
+        return false;
+    }
 }

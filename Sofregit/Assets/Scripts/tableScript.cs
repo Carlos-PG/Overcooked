@@ -17,13 +17,7 @@ public class tableScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (hasBoard)
-        {
-            GameObject obj = Instantiate(board, transform.position + new Vector3(0, 0.22f, 0), transform.rotation);
-            obj.transform.parent = this.gameObject.transform;
-            hasItem = false;
-            canProcess = false;
-        }
+        
     }
 
     // Update is called once per frame
@@ -59,7 +53,7 @@ public class tableScript : MonoBehaviour
 
     public bool itemIsProcesable()
     {
-        return true;
+        return item.GetComponent<Item>().isProcessable();
     }
 
     public bool mixItems(string name)
