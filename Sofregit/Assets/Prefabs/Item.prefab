@@ -1,0 +1,76 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5019602097354428574
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4559658961404921133}
+  - component: {fileID: 6881139509333824956}
+  m_Layer: 0
+  m_Name: Item
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4559658961404921133
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5019602097354428574}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -6.8557973, y: -15.963787, z: 1.8909578}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6881139509333824956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5019602097354428574}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec83b3e28a1b435439aad798181687a8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  apple: {fileID: 0}
+  strawberry: {fileID: 0}
+  carrot: {fileID: 0}
+  potato: {fileID: 0}
+  cucumber: {fileID: 0}
+  mushroom: {fileID: 0}
+  egg: {fileID: 0}
+  onion: {fileID: 0}
+  flour: {fileID: 0}
+  fish: {fileID: 0}
+  processedApple: {fileID: 0}
+  processedStrawberry: {fileID: 0}
+  processedCarrot: {fileID: 0}
+  processedPotato: {fileID: 0}
+  processedCucumber: {fileID: 0}
+  processedMushroom: {fileID: 0}
+  processedEgg: {fileID: 0}
+  processedOnion: {fileID: 0}
+  processedFish: {fileID: 0}
+  tortilla: {fileID: 0}
+  cake: {fileID: 0}
+  water: {fileID: 0}
+  appleCake: {fileID: 0}
+  strawberryCake: {fileID: 0}
+  carrotCake: {fileID: 0}
+  potatoTortilla: {fileID: 0}
+  cucumberTortilla: {fileID: 0}
+  mushroomTortilla: {fileID: 0}
+  onionSoup: {fileID: 0}
+  fishSoup: {fileID: 0}
+  food: {fileID: 0}
