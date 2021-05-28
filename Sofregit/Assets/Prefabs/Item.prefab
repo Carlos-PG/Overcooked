@@ -43,34 +43,54 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec83b3e28a1b435439aad798181687a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  apple: {fileID: 0}
-  strawberry: {fileID: 0}
-  carrot: {fileID: 0}
-  potato: {fileID: 0}
-  cucumber: {fileID: 0}
-  mushroom: {fileID: 0}
-  egg: {fileID: 0}
-  onion: {fileID: 0}
-  flour: {fileID: 0}
-  fish: {fileID: 0}
-  processedApple: {fileID: 0}
-  processedStrawberry: {fileID: 0}
-  processedCarrot: {fileID: 0}
-  processedPotato: {fileID: 0}
-  processedCucumber: {fileID: 0}
-  processedMushroom: {fileID: 0}
+  apple: {fileID: 8454493414119651172, guid: 8e2cff000e1abfc4dae6f7f7dd9e3c04, type: 3}
+  strawberry: {fileID: 729563137976490442, guid: f5614171f70798b41b9fbaa2fb2381f0,
+    type: 3}
+  carrot: {fileID: 5969651328678389657, guid: e081a7107874c2c49976e43577e4874e, type: 3}
+  potato: {fileID: 6586793919441659674, guid: 90e090f900fb0fa409c7f91504c741e1, type: 3}
+  cucumber: {fileID: 1874438948559537164, guid: d1867afa1c21c014cb6446487751d02e,
+    type: 3}
+  mushroom: {fileID: 8315039314628206971, guid: 2901070398d7bc24f80ef7c094198d33,
+    type: 3}
+  egg: {fileID: 2813395829044779562, guid: 31563784605714a47b02ba0efd639556, type: 3}
+  onion: {fileID: 7662500182367526254, guid: e095cd64c9846784f93271b5cec24913, type: 3}
+  flour: {fileID: 2160305164094781452, guid: 1711799fa0bb61448886bc3930e61002, type: 3}
+  fish: {fileID: 8037913371041089281, guid: 7d65f03925382ba48af624de03df2bd9, type: 3}
+  processedApple: {fileID: 2248623609401362770, guid: e7e0969bb54e9ed4b9745f55c37c4e38,
+    type: 3}
+  processedStrawberry: {fileID: 8413375109919900753, guid: 7aa76df9f0667c34cbe82410c028e380,
+    type: 3}
+  processedCarrot: {fileID: 560344858860090315, guid: 40c72e34006790c439fdbab02bd51458,
+    type: 3}
+  processedPotato: {fileID: 7504365874682930739, guid: 48e50db4e2de7a940ae09ce36357b9dd,
+    type: 3}
+  processedCucumber: {fileID: 5946005734078754963, guid: 047fde59df2a4334281f618788076582,
+    type: 3}
+  processedMushroom: {fileID: 3518582940465148282, guid: 9f01a4919d24b7842b24964693155e15,
+    type: 3}
   processedEgg: {fileID: 0}
-  processedOnion: {fileID: 0}
-  processedFish: {fileID: 0}
-  tortilla: {fileID: 0}
-  cake: {fileID: 0}
-  water: {fileID: 0}
-  appleCake: {fileID: 0}
-  strawberryCake: {fileID: 0}
-  carrotCake: {fileID: 0}
-  potatoTortilla: {fileID: 0}
-  cucumberTortilla: {fileID: 0}
-  mushroomTortilla: {fileID: 0}
-  onionSoup: {fileID: 0}
-  fishSoup: {fileID: 0}
+  processedOnion: {fileID: 2543088224480153426, guid: 1261268d929c9a14980c99a17ed98d72,
+    type: 3}
+  processedFish: {fileID: 4646817870034980748, guid: 14f429d24c6330741a04a8bd939adf31,
+    type: 3}
+  tortilla: {fileID: 9198442851370864732, guid: ad15f23ea0c4127419e7d52903fb31ab,
+    type: 3}
+  cake: {fileID: 6070053788605394812, guid: b2b101dcec372734fb6694e79559f8f2, type: 3}
+  water: {fileID: 8944585975679637617, guid: 9111f62a76dffce4784f22cfd97d7aa9, type: 3}
+  appleCake: {fileID: 9000231079749663892, guid: 880d0e4c818e17148a75193b522402ce,
+    type: 3}
+  strawberryCake: {fileID: 8927010758094858873, guid: b0a14a42a838e804b9cdec065f794883,
+    type: 3}
+  carrotCake: {fileID: 1528023695660158140, guid: 647ad3423baad4840b796bc1510f3ba2,
+    type: 3}
+  potatoTortilla: {fileID: 7882492344423022933, guid: 93eab063bcdfbdf4698352d22218b5ac,
+    type: 3}
+  cucumberTortilla: {fileID: 6601382098389938479, guid: a0913a12f74b3db44a5d5260dd267789,
+    type: 3}
+  mushroomTortilla: {fileID: 8533851655392931865, guid: ccfe2d1a20b4615488db2a0a57bacffe,
+    type: 3}
+  onionSoup: {fileID: 5151184145619771419, guid: ac8bbc42bc0106a499fcf80faec405ec,
+    type: 3}
+  fishSoup: {fileID: 3492815887686080946, guid: bb147127c2213144980bb2337c1d26af,
+    type: 3}
   food: {fileID: 0}
