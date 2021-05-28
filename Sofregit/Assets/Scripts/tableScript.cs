@@ -28,7 +28,7 @@ public class tableScript : MonoBehaviour
 
     public void placeFood(string name)
     {
-        item = Instantiate(itemObj, transform.position + new Vector3(0f, 0.731f, 0f), ingredientType.transform.rotation);
+        item = Instantiate(itemObj, transform.position + new Vector3(0f, 2.62f, 0f), transform.rotation);
         Item itemScript = item.gameObject.GetComponent<Item>();
         itemScript.createFoodByName(name);
         hasItem = true;

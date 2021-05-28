@@ -8,6 +8,31 @@ TagManager:
   - appleCake
   - Cake
   - processedApple
+  - Carrot
+  - Cucumber
+  - Egg
+  - Fish
+  - Flour
+  - Mushroom
+  - Onion
+  - Potato
+  - Strawberry
+  - Water
+  - carrotCake
+  - cucumberTortilla
+  - fishSoup
+  - mushroomTortilla
+  - onionSoup
+  - potatoTortilla
+  - strawberryCake
+  - processedCarrot
+  - processedCucumber
+  - processedFish
+  - processedOnion
+  - processedPotato
+  - processedStrawberry
+  - Tortilla
+  - processedMushroom
   layers:
   - Default
   - TransparentFX

@@ -23,7 +23,6 @@ public class Item : MonoBehaviour
     public GameObject processedPotato;
     public GameObject processedCucumber;
     public GameObject processedMushroom;
-    public GameObject processedEgg;
     public GameObject processedOnion;
     public GameObject processedFish;
 
@@ -155,12 +154,6 @@ public class Item : MonoBehaviour
             food = Instantiate(processedMushroom, transform.position, transform.rotation);
             food.transform.parent = transform;
         }
-        else if (name == "processedEgg")
-        {
-            if (food != null) Destroy(food);
-            food = Instantiate(processedEgg, transform.position, transform.rotation);
-            food.transform.parent = transform;
-        }
         else if (name == "processedOnion")
         {
             if (food != null) Destroy(food);
@@ -269,10 +262,6 @@ public class Item : MonoBehaviour
         {
             StartCoroutine(ChangeModel(processedMushroom));
         }
-        else if (type == "Egg")
-        {
-            StartCoroutine(ChangeModel(processedEgg));
-        }
         else if (type == "Onion")
         {
             StartCoroutine(ChangeModel(processedOnion));
@@ -296,14 +285,14 @@ public class Item : MonoBehaviour
     public bool mixFood(string name)
     {
         Debug.Log("Mezclando: " + name + " con: " + food.tag);
-        if((name == "processedEgg" && food.tag == "Flour") || (name == "Flour" && food.tag == "processedEgg"))
+        if((name == "Egg" && food.tag == "Flour") || (name == "Flour" && food.tag == "Egg"))
         {
             Destroy(food);
             food = Instantiate(cake, transform.position, transform.rotation);
             food.transform.parent = transform;
             return true;
         }
-        else if ((name == "processedEgg" && food.tag == "processedOnion") || (name == "processedOnion" && food.tag == "processedEgg"))
+        else if ((name == "Egg" && food.tag == "processedOnion") || (name == "processedOnion" && food.tag == "Egg"))
         {
             Destroy(food);
             food = Instantiate(tortilla, transform.position, transform.rotation);
@@ -371,7 +360,7 @@ public class Item : MonoBehaviour
 
     public bool isProcessable()
     {
-        if (food.tag == "Apple" || food.tag == "Strawberry" || food.tag == "Carrot" || food.tag == "Potato" || food.tag == "Cucumber" || food.tag == "Mushroom" || food.tag == "Egg" || food.tag == "Onion" || food.tag == "Fish") return true;
+        if (food.tag == "Apple" || food.tag == "Strawberry" || food.tag == "Carrot" || food.tag == "Potato" || food.tag == "Cucumber" || food.tag == "Mushroom" || food.tag == "Onion" || food.tag == "Fish") return true;
         return false;
     }
 }
