@@ -165,6 +165,13 @@ public class orderControllerLevel1 : MonoBehaviour
         }
     }
 
+    IEnumerator ChangeModel(GameObject processedFood)
+    {
+        //GameObject sceneManager = GameObject.Find("SceneChanger");
+        yield return new WaitForSeconds(4);
+
+        //sceneManager.GetComponent<NextScene>().ManageScene();
+    }
     public bool handOrder(GameObject item)
     {
         Debug.Log("Haging item");
