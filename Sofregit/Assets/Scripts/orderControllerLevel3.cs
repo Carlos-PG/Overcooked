@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class orderControllerLevel1 : MonoBehaviour
+public class orderControllerLevel3 : MonoBehaviour
 {
 
     private float totalTime = 180;
@@ -52,11 +52,13 @@ public class orderControllerLevel1 : MonoBehaviour
 
     private List<order> currentOrders;
 
-    private List<string> finalRecipes = new List<string>() {"appleCake", "strawberryCake", "carrotCake"};
-    private List<string> UINames = new List<string>() { "Apple Cake", "Strawberry Cake", "Carrot Cake" };
+    private List<string> finalRecipes = new List<string>() {"appleCake", "strawberryCake", "carrotCake", "onionSoup", "fishSoup"};
+    private List<string> UINames = new List<string>() { "Apple Cake", "Strawberry Cake", "Carrot Cake", "Onion Soup", "Fish Soup"};
     private List<string> ListAppleCakeIng = new List<string>() { "Egg", "Flour", "Apple" };
     private List<string> ListStrawberryCakeIng = new List<string>() { "Egg", "Flour", "Strawberry" };
     private List<string> ListCarrotCakeIng = new List<string>() { "Egg", "Flour", "Carrot" };
+    private List<string> ListOnionSoupIng = new List<string>() { "Fish", "Water" };
+    private List<string> ListFishSoupIng = new List<string>() { "Onion", "Water" };
     private List<List<string>> ingredients = new List<List<string>>();
 
     private 
@@ -66,7 +68,9 @@ public class orderControllerLevel1 : MonoBehaviour
         ingredients.Add(ListAppleCakeIng);
         ingredients.Add(ListStrawberryCakeIng);
         ingredients.Add(ListCarrotCakeIng);
-        int r = Random.Range(1, 4);
+        ingredients.Add(ListOnionSoupIng);
+        ingredients.Add(ListFishSoupIng);
+        int r = Random.Range(1, 6);
         Debug.Log(r);
         currentOrders = new List<order>();
         currentOrders.Add(new order(20, finalRecipes[r-1], UINames[r-1], ingredients[r-1]));
@@ -87,7 +91,7 @@ public class orderControllerLevel1 : MonoBehaviour
                 Debug.Log(currentOrders.Count);
                 if (timeToNextItem <= 0)
                 {
-                    int r = Random.Range(1, 4) - 1;
+                    int r = Random.Range(1, 6) - 1;
                     currentOrders.Add(new order(20, finalRecipes[r], UINames[r], ingredients[r]));
                     recipesCreated++;
                     timeToNextItem = 15;

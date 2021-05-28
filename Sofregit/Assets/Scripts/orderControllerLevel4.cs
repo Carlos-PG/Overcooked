@@ -3,9 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class orderControllerLevel1 : MonoBehaviour
+public class orderControllerLevel4 : MonoBehaviour
 {
-
     private float totalTime = 180;
     private int recipesToWin = 5;
     private int handedRecipes = 0;
@@ -52,24 +51,28 @@ public class orderControllerLevel1 : MonoBehaviour
 
     private List<order> currentOrders;
 
-    private List<string> finalRecipes = new List<string>() {"appleCake", "strawberryCake", "carrotCake"};
-    private List<string> UINames = new List<string>() { "Apple Cake", "Strawberry Cake", "Carrot Cake" };
-    private List<string> ListAppleCakeIng = new List<string>() { "Egg", "Flour", "Apple" };
-    private List<string> ListStrawberryCakeIng = new List<string>() { "Egg", "Flour", "Strawberry" };
-    private List<string> ListCarrotCakeIng = new List<string>() { "Egg", "Flour", "Carrot" };
+    private List<string> finalRecipes = new List<string>() { "mushroomTortilla", "cucumberTortilla", "potatoTortilla", "onionSoup", "fishSoup" };
+    private List<string> UINames = new List<string>() { "Mushroom Tortilla", "Cucumber Tortilla", "Potato Tortilla", "Onion Soup", "Fish Soup" };
+    private List<string> ListAppleCakeIng = new List<string>() { "Egg", "Onion", "Mushroom" };
+    private List<string> ListStrawberryCakeIng = new List<string>() { "Egg", "Onion", "Cucumber" };
+    private List<string> ListCarrotCakeIng = new List<string>() { "Egg", "Onion", "Potato" };
+    private List<string> ListOnionSoupIng = new List<string>() { "Fish", "Water" };
+    private List<string> ListFishSoupIng = new List<string>() { "Onion", "Water" };
     private List<List<string>> ingredients = new List<List<string>>();
 
-    private 
+    private
     // Start is called before the first frame update
     void Start()
     {
         ingredients.Add(ListAppleCakeIng);
         ingredients.Add(ListStrawberryCakeIng);
         ingredients.Add(ListCarrotCakeIng);
-        int r = Random.Range(1, 4);
+        ingredients.Add(ListOnionSoupIng);
+        ingredients.Add(ListFishSoupIng);
+        int r = Random.Range(1, 6);
         Debug.Log(r);
         currentOrders = new List<order>();
-        currentOrders.Add(new order(20, finalRecipes[r-1], UINames[r-1], ingredients[r-1]));
+        currentOrders.Add(new order(20, finalRecipes[r - 1], UINames[r - 1], ingredients[r - 1]));
         Debug.Log(currentOrders[0].finalRecipe);
     }
 
@@ -81,13 +84,13 @@ public class orderControllerLevel1 : MonoBehaviour
         {
             timeToNextItem -= Time.deltaTime;
             totalTime -= Time.deltaTime;
-            countDownText.text = ((int) totalTime).ToString();
+            countDownText.text = ((int)totalTime).ToString();
             if (currentOrders.Count < 3 && handedRecipes < recipesToWin && recipesCreated < recipesToWin)
             {
                 Debug.Log(currentOrders.Count);
                 if (timeToNextItem <= 0)
                 {
-                    int r = Random.Range(1, 4) - 1;
+                    int r = Random.Range(1, 6) - 1;
                     currentOrders.Add(new order(20, finalRecipes[r], UINames[r], ingredients[r]));
                     recipesCreated++;
                     timeToNextItem = 15;
@@ -115,7 +118,7 @@ public class orderControllerLevel1 : MonoBehaviour
                 text3Panel2.text = currentOrders[1].ingredients[2];
                 timeLeftPanel2.text = ((int)currentOrders[1].timeToEnd).ToString();
             }
-            else if(currentOrders.Count == 3)
+            else if (currentOrders.Count == 3)
             {
                 namePanel1.text = currentOrders[0].UIName;
                 text1Panel1.text = currentOrders[0].ingredients[0];
@@ -145,22 +148,22 @@ public class orderControllerLevel1 : MonoBehaviour
                 text3Panel2.text = "";
                 namePanel2.text = "";
                 timeLeftPanel2.text = "";
-                namePanel3.text =  "";
+                namePanel3.text = "";
                 text1Panel3.text = "";
                 text2Panel3.text = "";
                 text3Panel3.text = "";
                 timeLeftPanel3.text = "";
             }
-            
+
 
 
         }
-        else if(totalTime <= 0)
+        else if (totalTime <= 0)
         {
             endRoundText.text = "Time!";
             StartCoroutine(ChangeModel());
         }
-        else if(handedRecipes >= recipesToWin)
+        else if (handedRecipes >= recipesToWin)
         {
             endRoundText.text = "Congratulations!";
             StartCoroutine(ChangeModel());
@@ -182,9 +185,9 @@ public class orderControllerLevel1 : MonoBehaviour
         Debug.Log(name);
         if (finalRecipes.Contains(name))
         {
-            foreach(order ord in currentOrders)
+            foreach (order ord in currentOrders)
             {
-                if(ord.finalRecipe == name)
+                if (ord.finalRecipe == name)
                 {
                     handedRecipes++;
                     currentOrders.Remove(ord);
