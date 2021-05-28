@@ -33,6 +33,7 @@ TagManager:
   - processedStrawberry
   - Tortilla
   - processedMushroom
+  - orderController
   layers:
   - Default
   - TransparentFX

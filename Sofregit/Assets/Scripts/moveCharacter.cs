@@ -199,6 +199,18 @@ public class moveCharacter : MonoBehaviour
                     timeBetweenActions = 500;
                 }
             }
+            if(hit.collider.gameObject.tag == "orderController") {
+                if (Input.GetKey(KeyCode.Space) && hasItem)
+                {
+                    orderControllerLevel1 orderController = hit.collider.gameObject.GetComponent<orderControllerLevel1>();
+                    if (orderController.handOrder(item))
+                    {
+                        Destroy(item);
+                        hasItem = false;
+                    }
+                    timeBetweenActions = 500;
+                }
+            }
         }
     }
 
