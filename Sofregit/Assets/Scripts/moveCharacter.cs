@@ -24,6 +24,10 @@ public class moveCharacter : MonoBehaviour
 
     public Transform rightHand;
 
+    public AudioSource ErrorSound;
+    public AudioSource SuccessSound;
+    public AudioSource KnifeChoppingSound;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -89,6 +93,7 @@ public class moveCharacter : MonoBehaviour
                     Debug.Log("Apreta espacio");
                     if (!hasItem)
                     {
+                        SuccessSound.Play();
                         Debug.Log("No tiene item");
                         item = Instantiate(itemObj);
                         item.transform.parent = rightHand;
@@ -100,6 +105,7 @@ public class moveCharacter : MonoBehaviour
                     }
                     else
                     {
+                        ErrorSound.Play();
                         Debug.Log("Tiene item");
                     }
                     timeBetweenActions = 500;
@@ -120,12 +126,18 @@ public class moveCharacter : MonoBehaviour
                             Debug.Log("La mesa tiene item"); //No puede dejar el item pero puede que se tengan que mezclar!!!!!!
                             if(script.mixItems(item.GetComponent<Item>().food.tag))
                             {
+                                SuccessSound.Play();
                                 Destroy(item);
                                 hasItem = false;
+                            }
+                            else
+                            {
+                                ErrorSound.Play();
                             }
                         }
                         else
                         {
+                            SuccessSound.Play();
                             Debug.Log("La mesa no tiene item"); //Deja el item en la mesa
                             script.placeFood(item.GetComponent<Item>().food.tag);
                             Destroy(item);
@@ -137,6 +149,7 @@ public class moveCharacter : MonoBehaviour
                         Debug.Log("No tiene item");
                         if (script.hasItem)
                         {
+                            SuccessSound.Play();
                             Debug.Log("La mesa tiene item"); //Recoge el item
                             string foodType = script.pickUpFood();
                             item = Instantiate(itemObj);
@@ -149,6 +162,7 @@ public class moveCharacter : MonoBehaviour
                         }
                         else
                         {
+                            ErrorSound.Play();
                             Debug.Log("La mesa no tiene item"); //No puede hacer nada
                         }
                     }
@@ -159,6 +173,7 @@ public class moveCharacter : MonoBehaviour
                     Debug.Log("Apreta C");
                     if (hasItem)
                     {
+                        ErrorSound.Play();
                         Debug.Log("Tiene item"); //No puede hacer nada
                     }
                     else
@@ -172,6 +187,7 @@ public class moveCharacter : MonoBehaviour
                                 Debug.Log("El item se puede cortar");
                                 if(script.hasBoard)
                                 {
+                                    KnifeChoppingSound.Play();
                                     Debug.Log("La mesa tiene tabla de corte"); //Comprobar si es 
                                     script.processFood();
                                     timeToCut = 5;
@@ -183,16 +199,19 @@ public class moveCharacter : MonoBehaviour
                                 }
                                 else
                                 {
+                                    ErrorSound.Play();
                                     Debug.Log("La mesa no tiene tabla de corte"); //No puede hacer nada
                                 }
                             }
                             else
                             {
+                                ErrorSound.Play();
                                 Debug.Log("El item no se puede cortar"); //No puede hacer nada
                             }
                         }
                         else
                         {
+                            ErrorSound.Play();
                             Debug.Log("La mesa no tiene item"); //No puede hacer nada
                         }
                     }
